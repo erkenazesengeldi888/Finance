@@ -29,21 +29,21 @@ npx hardhat compile
 Running the Local Network
 In the first terminal, start the local Hardhat node:
 
-Bash
+## Bash
 npx hardhat node
 The node provides test accounts and a local network at http://127.0.0.1:8545 (chain ID 31337). These are intended for local development only.
 
-Deployment
+## Deployment
 In the second terminal, from the project root, run:
 
-Bash
+## Bash
 npx hardhat run scripts/deploy.js --network localhost
 The console will display the deployed contract address and the owner's address. The npm run deploy:local command is also available.
 
-Tests
+## Tests
 Bash
 npx hardhat test
 The tests verify the owner, successful issuance, duplicate prevention, verification of valid and non-existent certificates, revocation, revocation events, and access control restrictions.
 
-Demo
+## Demo
 Demo link: add the link after publishing/demonstrating the project.
