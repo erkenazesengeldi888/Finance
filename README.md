@@ -2,64 +2,49 @@ Educational project for the course Introduction to Finance. Not a real product, 
 
 # CertiChain
 
-Технический учебный проект для курса «Введение в финансы» в Astana IT University. CertiChain показывает, как выпускать, проверять и отзывать сертификаты, храня на блокчейне только хеш документа.
+Technical educational project for the course "Introduction to Finance" at Astana IT University. CertiChain demonstrates how to issue, verify, and revoke certificates by storing only the document hash on the blockchain.
 
-## Возможности
+## Features
 
-- Выпуск документа с `bytes32` хешем и ID университета.
-- Хранение времени выпуска и статуса отзыва.
-- Проверка активного сертификата и отзыв только владельцем контракта.
-- События `CertificateIssued` и `CertificateRevoked`.
+- Issuance of documents with a `bytes32` hash and a university ID.
+- Storage of the issuance timestamp and revocation status.
+- Verification of active certificates and revocation restricted to the contract owner.
+- `CertificateIssued` and `CertificateRevoked` events.
 
-Контракт не хранит сам диплом. Для учебной демонстрации используйте синтетические данные и не записывайте персональную или конфиденциальную информацию в блокчейн.
+The contract does not store the diploma itself. For educational demonstration purposes, use synthetic data and never record personal or confidential information on the blockchain.
 
-## Требования
+## Prerequisites
 
-- Node.js 18 или новее
+- Node.js 18 or newer
 - npm
 
-## Установка
+## Installation
 
-Из корня проекта выполните:
+From the project root, run:
 
 ```bash
 npm install
-```
-
-## Компиляция контракта
-
-```bash
+Contract Compilation
+Bash
 npx hardhat compile
-```
+Running the Local Network
+In the first terminal, start the local Hardhat node:
 
-## Запуск локальной сети
-
-В первом терминале запустите локальную ноду Hardhat:
-
-```bash
+Bash
 npx hardhat node
-```
+The node provides test accounts and a local network at http://127.0.0.1:8545 (chain ID 31337). These are intended for local development only.
 
-Нода предоставляет тестовые аккаунты и локальную сеть на `http://127.0.0.1:8545` (chain ID `31337`). Они предназначены только для локальной разработки.
+Deployment
+In the second terminal, from the project root, run:
 
-## Деплой
-
-Во втором терминале из корня проекта выполните:
-
-```bash
+Bash
 npx hardhat run scripts/deploy.js --network localhost
-```
+The console will display the deployed contract address and the owner's address. The npm run deploy:local command is also available.
 
-В консоли появятся адрес задеплоенного контракта и адрес владельца. Также доступна команда `npm run deploy:local`.
-
-## Тесты
-
-```bash
+Tests
+Bash
 npx hardhat test
-```
+The tests verify the owner, successful issuance, duplicate prevention, verification of valid and non-existent certificates, revocation, revocation events, and access control restrictions.
 
-Тесты проверяют владельца, успешный выпуск, запрет дубликата, верификацию действующего и отсутствующего сертификатов, отзыв, событие отзыва и ограничения доступа.
-
-## Демо
-
-Ссылка на демо: **добавьте ссылку после публикации/демонстрации проекта**.
+Demo
+Demo link: add the link after publishing/demonstrating the project.
