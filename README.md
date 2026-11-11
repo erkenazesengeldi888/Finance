@@ -22,7 +22,6 @@ The contract does not store the diploma itself. For educational demonstration pu
 
 From the project root, run:
 
-```bash
 npm install
 Contract Compilation
 Bash
