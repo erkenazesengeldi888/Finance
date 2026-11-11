@@ -4,6 +4,8 @@ Educational project for the course Introduction to Finance. Not a real product, 
 
 Technical educational project for the course "Introduction to Finance" at Astana IT University. CertiChain demonstrates how to issue, verify, and revoke certificates by storing only the document hash on the blockchain.
 
+https://drive.google.com/file/d/1N1FbJaRtMKa2YgEqo2oeDd0jV02UHSEM/view?usp=drivesdk
+
 ## Features
 
 - Issuance of documents with a `bytes32` hash and a university ID.
